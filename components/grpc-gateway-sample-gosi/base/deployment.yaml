@@ -30,7 +30,7 @@ spec:
       - args:
         - -grpc-server-endpoint
         - tekton-results-api-service.oandriie-tenant.svc.cluster.local:50051
-        image: docker.io/aandrienko/grpc-gateway
+        image: quay.io/redhat-user-workloads-stage/oandriie-tenant/grpc-gateway-sample/grpc-gateway-sample-gosi@sha256:81557658f39380f48a8213de08691a7238918b27b0d9c44fbeaaec5d380cdfaf
         name: my-nodejs
         ports:
         - containerPort: 3001
