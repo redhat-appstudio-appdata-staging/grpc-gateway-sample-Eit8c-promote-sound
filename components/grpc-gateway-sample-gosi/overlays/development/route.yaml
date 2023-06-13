@@ -1,0 +1,20 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: grpc-gateway-sample-gosi
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: grpc-gateway-sample-gosi
+    app.kubernetes.io/part-of: grpc-gateway-sample
+  name: grpc-gateway-sample-gosi
+spec:
+  path: /
+  port:
+    targetPort: 3001
+  to:
+    kind: Service
+    name: grpc-gateway-sample-gosi
+    weight: null
+status: {}
